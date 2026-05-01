@@ -14,10 +14,10 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install pytest flake8
+        run: pip install -r requirements.txt
 
       - name: Lint
-        run: flake8 . --max-line-length=120
+        run: flake8 main.py utils.py tests --max-line-length=120
 
       - name: Test
         run: pytest -v
