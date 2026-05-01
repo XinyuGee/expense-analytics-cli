@@ -1,17 +1,18 @@
 def calculate_mean(numbers):
     """Calculate the arithmetic mean of a list of numbers."""
     if not numbers:
-        return None
+        raise ValueError("Empty list")
     return sum(numbers) / len(numbers)
 
 
 def calculate_std(numbers):
     """Calculate the standard deviation of a list of numbers."""
     if not numbers:
-        return 0
+        raise ValueError("Empty list")
     mean = calculate_mean(numbers)
     variance = sum((x - mean) ** 2 for x in numbers) / len(numbers)
     return variance ** 0.5
+
 
 def calculate_median(numbers):
     """Calculate the median of a list of numbers."""
