@@ -1,7 +1,7 @@
 def calculate_mean(numbers):
     """Calculate the arithmetic mean of a list of numbers."""
     if not numbers:
-        return 0
+        return None
     return sum(numbers) / len(numbers)
 
 
